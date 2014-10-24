@@ -5,9 +5,10 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class User extends Eloquent
+class Item extends Eloquent
 {
-  public function carts() {
-    $this->hasMany('Cart', 'cart_id');
+  public function orders() {
+    $this->hasMany('Order', 'order_id');
   }
+
 }
